@@ -44,7 +44,7 @@ const registerUser = asyncWrapper (async (req, res, next) => {
         })
 }
 )
-// POST login user - create account
+// POST login user - log in to the account
 const loginUser = asyncWrapper (async (req, res, next) => {
     const { email, password } = req.body;
     
@@ -99,6 +99,13 @@ const getUser = asyncAuthWrapper(async (req, res, next) => {
     res.status(200).json({user})
 })
 
+// GET userToken - check if user have cookie token
+
+const getAuthToken = asyncWrapper(async (req, res, next) => {
+    const token = req.cookies['jwt']
+    token === undefined ? (res.json({userAuthorized: false, msg: 'not authorized'})):(res.json({ userAuthorized: true, msg: 'User already authorized', token: token }));
+});
+
 // GET users - user list (admin group)
 const getUsers = asyncWrapper( async (req,res, next) => {
     const users = await User.find({})
@@ -130,5 +137,5 @@ const deleteUser = asyncWrapper (async (req, res, next) => {
     res.status(200).json({msg: `User ${userId} deleted!`})
 })
 
-module.exports = { registerUser, loginUser, getUser, getUsers, updateUser, deleteUser };
+module.exports = { registerUser, loginUser, getUser, getUsers, updateUser, deleteUser, getAuthToken};
 

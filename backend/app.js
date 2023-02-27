@@ -2,6 +2,9 @@
 const express = require("express");
 const app = express();
 const path = require('path')
+
+const cors = require('cors');
+
 const cookieParser = require('cookie-parser');
 const routeItems = require('./routes/items');
 const routeUser = require('./routes/user');
@@ -14,6 +17,15 @@ const errorHandlerMiddleWare = require("./middleware/error-handler");
 require('dotenv').config();
 
 // middleware
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', req.header('origin') );
+  next();
+});
+app.use(cors({
+    credentials: true, origin: 'http://localhost:8080', methods: "GET,HEAD,PUT,PATCH,POST,DELETE", preflightContinue: false,
+
+}));
+
 
 app.use(express.json());
 app.use(cookieParser());

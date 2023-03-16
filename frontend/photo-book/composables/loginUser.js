@@ -19,7 +19,7 @@ const loginUser = (username, pass) => {
             post = await data.json();
             console.log(post);
         }
-        catch(error) {
+        catch(err) {
             error.value = err.message;
         }
     }

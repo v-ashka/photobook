@@ -8,8 +8,26 @@ const getAllItems = asyncWrapper(async (req, res) => {
     res.status(200).json({ items });
 });
 
-const createItem = asyncWrapper( async (req, res) => {
-        const item = await Item.create(req.body);
+const createItem = asyncWrapper(async (req, res) => {
+    console.log('create item')
+    console.log(req.body);
+    
+    const { author_id, name, title, img_uri } = req.body;
+    const query = {
+        author_id,
+        name,
+        title,
+        img_uri,
+        created_at: Date.now(),
+        views: 0
+    }
+
+    console.log(query);
+    const item = await Item.create(query);
+    if (!item) {
+        return next(createCustomError(`Cannot create new item!`, 500));
+    }
+    console.log(item);
         res.status(201).json({ item });
 })
 

@@ -2,10 +2,11 @@ const express = require('express')
 const router = express.Router()
 
 // const { getAllItem } = require('../controllers/user') 
-const { registerUser, loginUser, getUser, getUsers, updateUser, deleteUser, getAuthToken } = require('../controllers/user');
+const { registerUser, loginUser, getUser, getUsers, updateUser, deleteUser, getAuthToken, logoutUser } = require('../controllers/user');
 router.route('/register').post(registerUser);
 router.route('/login').post(loginUser);
 router.route('/auth').get(getAuthToken);
+router.route('/logout').get(logoutUser)
 router.route('/').get(getUsers);
 router.route('/:id').get(getUser).patch(updateUser).delete(deleteUser);
 

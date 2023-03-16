@@ -106,6 +106,15 @@ const getAuthToken = asyncWrapper(async (req, res, next) => {
     token === undefined ? (res.json({userAuthorized: false, msg: 'not authorized'})):(res.json({ userAuthorized: true, msg: 'User already authorized', token: token }));
 });
 
+const logoutUser = asyncWrapper(async (req, res, next) => {
+    const token = req.cookies['jwt'];
+    console.log(token);
+    if (token === undefined)
+        return res.status(401).json({ msg: 'Invalid token!' });
+    res.clearCookie('jwt');
+    res.end();
+});
+
 // GET users - user list (admin group)
 const getUsers = asyncWrapper( async (req,res, next) => {
     const users = await User.find({})
@@ -137,5 +146,5 @@ const deleteUser = asyncWrapper (async (req, res, next) => {
     res.status(200).json({msg: `User ${userId} deleted!`})
 })
 
-module.exports = { registerUser, loginUser, getUser, getUsers, updateUser, deleteUser, getAuthToken};
+module.exports = { registerUser, loginUser, getUser, getUsers, updateUser, deleteUser, getAuthToken, logoutUser};
 

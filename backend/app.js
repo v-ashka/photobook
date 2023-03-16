@@ -39,6 +39,8 @@ app.get('/', (req, res) => {
 app.use('/api/v1/items', routeItems);
 app.use('/api/v1/user', routeUser);
 app.use('/api/v1/file', routerFile);
+app.use('/img', express.static(path.join(__dirname, "files/")))
+
 
 app.use(notFound);
 app.use(errorHandlerMiddleWare);

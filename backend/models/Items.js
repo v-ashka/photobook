@@ -1,6 +1,11 @@
 const mongoose = require('mongoose');
 
 const ItemSchema = new mongoose.Schema({
+    author_id: {
+        type: String,
+        required: [true, 'must provide author id'],
+        trim: true
+    },
     name: {
         type: String,
         required: [true, 'must provide a name'],
@@ -20,7 +25,15 @@ const ItemSchema = new mongoose.Schema({
         required: false,
         maxlength:[50, 'title can not be more than 50 characters']
     },
-    views: { type:Number, default: 0},
+    featured_comments: {
+        type: [mongoose.ObjectId],
+        required: false,
+        default: []
+    },
+    views: { type: Number, default: 0 },
+    likes: { type: Number, default: 0 },
+    shares: { type: Number, default: 0 },
+    comments: {type: Number, default: 0},
 })
 
 module.exports = mongoose.model('Items', ItemSchema)

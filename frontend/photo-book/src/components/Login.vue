@@ -1,22 +1,28 @@
 <template>
-   <div v-if="loginForm">
-          <form id="login-form" @submit.prevent="loginUser(email, pass)">
-            <label>Login</label>
-              <input type="text" name="login" v-model="email">
-            <label>Password</label>
-              <input type="password" name="password" v-model="pass">
-                <a href="#">Forgot passwword?</a>
-                <button type="submit">Sign in</button>          
-                  <router-link :to="{ name: 'Register'}">Sign up</router-link>
-              </form> 
-            </div>
-            <div v-else>
-              <form @submit.prevent>
-                <label>Hello {{ loggedUser }} </label>
-                <button>Go to the dashboard</button>
-                <button @click="logoutUser()">Log out</button>
-              </form>
-            </div>
+
+   <div class="form__row">
+        <div class="header__text">
+            <p><span class="highlighted">Sign in</span> to <span>your</span> account</p>
+        </div>
+       <div v-if="loginForm">
+              <form id="login-form" @submit.prevent="loginUser(email, pass)">
+                <label>Login</label>
+                  <input type="text" name="login" v-model="email">
+                <label>Password</label>
+                  <input type="password" name="password" v-model="pass">
+                    <a href="#">Forgot passwword?</a>
+                    <button type="submit">Sign in</button>
+                      <router-link :to="{ name: 'Register'}">Sign up</router-link>
+                  </form>
+                </div>
+                <div v-else>
+                  <form @submit.prevent>
+                    <label>Hello {{ loggedUser }} </label>
+                    <button>Go to the dashboard</button>
+                    <button @click="logoutUser()">Log out</button>
+                  </form>
+        </div>
+   </div>
 </template>
 
 <script>

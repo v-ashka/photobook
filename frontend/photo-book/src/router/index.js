@@ -4,7 +4,6 @@ import Dashboard from '../views/Dashboard.vue';
 import Account from '../views/Account.vue';
 import Register from '../components/Register.vue'
 import Login from '../components/Login.vue';
-import Pussy from '../views/Pussy.vue';
 
 const routes = [
   {

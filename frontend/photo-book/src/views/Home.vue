@@ -1,19 +1,24 @@
-
-
 <template>
-  <div id="home">
-    <div class="box image-box">
-      <div class="image-body">
-        <img :src="require('@/assets/home/slide1.png')" alt="First image slide" />
-        <img :src="require('@/assets/home/slide2.png')" alt="Second image slide">
-      </div>
-      <div class="image-heading">
-        <h1>Lorem ipsum</h1>
-      </div>
+  <div id="row">
+    <header><p class="logo">PhotoBook</p></header>
+    <div class="left-box">
+      <LeftBox />
     </div>
-    <div class="box form-box">
+    <div class="right-box">
       <LoginUser />
     </div>
+    <footer>
+      <ul>
+        <li>Privacy</li>
+        <li>Help</li>
+        <li>Locations</li>
+        <li>Josbs</li>
+        <li>Terms</li>
+        <li>API</li>
+        <li>About</li>
+        <li>&copy; 2023 Photobook</li>
+      </ul>
+    </footer>
   </div>
 </template>
 
@@ -21,8 +26,9 @@
 // import VueJwtDecode from 'vue-jwt-decode';
 
 // import { computed, reactive, ref, onMounted, onUpdated, onBeforeMount } from 'vue';
-import NavBar from '../components/Navbar.vue';
+// import NavBar from '../components/Navbar.vue';
 import LoginUser from '../components/Login.vue'
+import LeftBox from '../components/LeftBox.vue'
 // import Login from '../components/Login.vue'
 
 
@@ -43,14 +49,11 @@ import LoginUser from '../components/Login.vue'
 </script>
 
 <style>
-  #home{
+  .row{
     display: grid;
     grid-template-columns: 1fr 2fr;
     background-color: #f3f3f3;
   }
-
-
-
   .box{
     padding: 2em;
   }

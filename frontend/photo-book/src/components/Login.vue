@@ -2,25 +2,32 @@
 
    <div class="form__row">
         <div class="header__text">
-            <p><span class="highlighted">Sign in</span> to <span>your</span> account</p>
+            
+            <p v-if="loginForm"><span class="highlighted">Sign in</span> to <span>your</span> account.</p>
+            <p v-else><span>Welcome</span> back <span class="highlighted">{{ loggedUser }}.</span></p>
         </div>
        <div v-if="loginForm">
               <form id="login-form" @submit.prevent="loginUser(email, pass)">
-                <label>Login</label>
-                  <input type="text" name="login" v-model="email">
-                <label>Password</label>
-                  <input type="password" name="password" v-model="pass">
-                    <a href="#">Forgot passwword?</a>
-                    <button type="submit">Sign in</button>
-                      <router-link :to="{ name: 'Register'}">Sign up</router-link>
+                <div class="form__input">
+                      <input type="text" name="login" v-model="email" required>
+                      <label>Email</label>
+                </div>
+                <div class="form__input">
+                    <input type="password" name="password" v-model="pass" required>
+                    <label>Password</label>
+                </div>
+                    <a href="#" class="form__link">Forgot <span>password?</span></a>
+                    <div class="form__btn">
+                        <button type="submit" class="btn-link">Sign in</button>
+                        <router-link :to="{ name: 'Register'}" class="btn-link">Sign up</router-link>
+                    </div>
                   </form>
                 </div>
-                <div v-else>
-                  <form @submit.prevent>
-                    <label>Hello {{ loggedUser }} </label>
-                    <button>Go to the dashboard</button>
-                    <button @click="logoutUser()">Log out</button>
-                  </form>
+                <div v-else id="login-form">
+                        <div class="form__btn">
+                            <router-link :to="{name: 'Dashboard'}" class="btn-link">Back to Dashboard</router-link>
+                            <button @click="logoutUser()" class="btn-link">Log out</button>
+                </div>
         </div>
    </div>
 </template>

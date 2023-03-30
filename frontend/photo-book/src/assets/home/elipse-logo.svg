@@ -1,0 +1,65 @@
+<svg width="1011" height="1011" viewBox="0 0 1011 1011" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <style type="text/css">
+
+
+        @keyframes x {
+        from { fill: #000; }
+        to { fill: #fff; }
+        }
+
+        @keyframes rotateCircle {
+        0% {
+        transform: translate(15%, -85%) rotate(35deg);
+        }
+        50% {
+        transform: translate(15%, -85%) rotate(360deg);
+        }
+        100% {
+        transform: translate(15%, -85%) rotate(35deg);
+        }
+        }
+    </style>
+    <circle id="a" cx="505.749" cy="505.749" r="505" transform="rotate(14.2469 505.749 505.749)"
+        fill="url(#paint0_linear_63_28)" />
+    <defs>
+        <linearGradient id="paint0_linear_63_28" x1="297.963" y1="1031.79" x2="839.786" y2="126.999"
+            gradientUnits="userSpaceOnUse">
+            <stop offset="0.0556032" stop-color="#D9ED92">
+
+            </stop>
+            <stop offset="0.20368" stop-color="#B5E48C" stop-opacity="0.74">
+
+            </stop>
+            <stop offset="0.325148" stop-color="#99D98C" stop-opacity="0.894462">
+
+            </stop>
+            <stop offset="0.449894" stop-color="#76C893" stop-opacity="0.92869">
+
+            </stop>
+            <stop offset="0.583404" stop-color="#52B69A">
+
+            </stop>
+            <stop offset="0.708915" stop-color="#34A0A4">
+
+            </stop>
+            <stop offset="0.793536" stop-color="#168AAD">
+
+            </stop>
+            <stop offset="0.880208" stop-color="#1A759F">
+
+            </stop>
+            <stop offset="1" stop-color="#184E77">
+
+            </stop>
+        </linearGradient>
+    </defs>
+</svg>
+
+<!-- 
+<animate attributeName="stop-color"
+    values="hsl(73, 72%, 75%);hsla(92, 62%, 72%, 0.74);hsla(110, 50%, 70%, 0.8945);hsla(141, 43%, 62%,
+0.9287);52B69A;34A0A4;168AAD;1A759F;184E77"
+    dur="15s"
+    repeatCount="alternate">
+</animate> -->

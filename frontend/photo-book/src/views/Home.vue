@@ -1,28 +1,39 @@
 <template>
   <div id="row">
-    <header><p class="logo">PhotoBook</p></header>
-    <div class="left-box">
-      <LeftBox />
-    </div>
-    <div class="right-box">
-      <LoginUser />
-    </div>
+    <!-- <div class="circullar-background"></div> -->
+    <main>
+      <div class="box left-box">
+        <LeftBox />
+      </div>
+      <div class="box right-box">
+        <div class="form__container">
+          <header><p class="logo">PhotoBook</p></header>
+          <LoginUser />
+        </div>
+      </div>
+    </main>
     <footer>
       <ul>
         <li>Privacy</li>
         <li>Help</li>
         <li>Locations</li>
-        <li>Josbs</li>
+        <li>Jobs</li>
         <li>Terms</li>
         <li>API</li>
         <li>About</li>
         <li>&copy; 2023 Photobook</li>
       </ul>
     </footer>
+    <section>
+      <div class="circle">
+
+      </div>
+    </section>
   </div>
 </template>
 
 <script setup>
+
 // import VueJwtDecode from 'vue-jwt-decode';
 
 // import { computed, reactive, ref, onMounted, onUpdated, onBeforeMount } from 'vue';
@@ -48,13 +59,3 @@ import LeftBox from '../components/LeftBox.vue'
 // });
 </script>
 
-<style>
-  .row{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    background-color: #f3f3f3;
-  }
-  .box{
-    padding: 2em;
-  }
-</style>

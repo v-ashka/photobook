@@ -1,0 +1,439 @@
+:root {
+    --clr-neutral-900: hsl(0, 0%, 0%);
+    --clr-neutral-500: hsl(0, 0%, 18%);
+    --clr-neutral-400: hsl(0, 0%, 85%);
+    --clr-neutral-300: hsl(0, 0%, 92%);
+    --clr-neutral-200: hsl(0, 0%, 96%);
+    --clr-neutral-100: hsl(0, 0% , 100%);  
+
+     --grdient-primary: linear-gradient(0deg, hsl(73, 72%, 75%), hsla(92, 62%, 72%, 0.74), hsla(110, 50%, 70%, 0.8945), hsla(141, 43%, 62%, 0.9287), #52B69A, #34A0A4, #168AAD, #1A759F, #184E77);
+     --gradient-short: linear-gradient(0deg, #D9ED92, #52B69A, #184E77);
+
+
+    --ff-accent: 'Instagram Sans', serif;
+    --ff-base: 'Montserrat', sans-serif;
+    --ff-logo: 'Billabong', sans-serif;
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+    
+
+    /* margins desktop */
+    --margin-rt-box: 0rem;
+    --margin-lt-box: 20rem;
+
+    --margin-bt-box: 15rem;
+
+    /* margin laptop */
+    --margin-lt-box--l: 15rem;
+
+    /* margin tablet */
+    --margin-lt-box--t: 12rem;
+
+    /* gradient background scalability */
+    --scale-xxl: scale(1.3);
+    --scale-xl: scale(1.1);
+    --scale-l: scale(1);
+
+    /* logo sizes */
+    /* desktop */
+    --fs-xs: .8rem;
+    --fs-s: 1rem;
+    --fs-m: 1.2rem;
+    --fs-l: 1.4rem;
+    --fs-xl: 2.2rem;
+    --fs-xxl: 2.5rem;
+    --fs-3xl: 3rem;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+a, a:hover, a:visited, a:link, a:active{
+    text-decoration: none;
+    box-shadow: none;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+    height: 100%;
+    font-family: var(--ff-base);
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    background-image: url("../home/elipse-logo.svg");
+    background-repeat: no-repeat;
+    background-position: 15rem -4rem;
+    background-size: 50rem;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+}
+
+ul li{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+#app, #row{
+    height: 100%;
+}
+
+#row{
+    display: flex;
+    flex-flow: column;
+    min-height: 100%;
+    justify-content: space-between;
+}
+
+main{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+footer{
+    max-width: 100%;
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+
+footer ul{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    padding: unset;
+}
+
+
+
+
+/* LOGO */
+
+.logo {
+    font-family: var(--ff-logo);
+    font-size: var(--fs-xl);
+    color: var(--clr-neutral-100);
+}
+
+header .logo {
+    text-align: right;
+}
+
+
+/* FORM Styles */
+.form__row .header__text {
+    font-size: var(--fs-xxl);
+    font-weight: var(--fw-semibold);
+}
+
+.form__row .header__text span {
+    font-weight: var(--fw-extrabold);
+}
+
+.form__row .header__text span:is(.highlighted) {
+    color: white;
+}
+
+.form__row #login-form {
+    display: inline-flex;
+    flex-flow: column;
+}
+
+.form__row .form__btn {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+}
+
+form .form__input {
+    display: flex;
+    flex-flow: column-reverse;
+    height: 5rem;
+}
+
+#login-form input,
+.form__btn * {
+    background-color: unset;
+    border-radius: 2rem;
+}
+
+#login-form input {
+    border: 1px solid var(--clr-neutral-900);
+    position: relative;
+    z-index: 3;
+    padding: .4rem .9rem;
+
+    font-size: var(--fs-m);
+    height: 2rem;
+}
+
+#login-form input[type="password"] {
+    font-family: caption;
+}
+
+#login-form .form__input input:is(:active, :focus, :valid)~label {
+    top: 0rem;
+    font-size: var(--fs-xs);
+}
+
+#login-form label {
+    position: relative;
+    z-index: 1;
+    top: 2.3rem;
+    left: 1rem;
+    transition: all .2s ease-out;
+}
+
+
+.form__btn {
+    margin-top: 1.5em;
+
+}
+
+.form__btn > .btn-link{
+    border: 1px solid var(--clr-neutral-100);
+    color: var(--clr-neutral-100);
+    font-size: var(--fs-m);
+    transition: .1s all ease-in-out;
+    text-align: center;
+    padding: .2rem 0rem;
+    width: 6.5em;
+}
+
+.form__btn> :hover {
+    cursor: pointer;
+    font-weight: var(--fw-semibold);
+    border: 2px solid var(--clr-neutral-100);
+}
+
+/* .form__btn>*:last-child {
+    margin-left: 1rem;
+} */
+
+#login-form .form__link {
+    color: var(--clr-neutral-900);
+    transition: .2s all ease-in-out;
+}
+
+#login-form .form__link>span {
+    font-weight: var(--fw-extrabold);
+}
+
+#login-form .form__link:hover {
+    color: var(--clr-neutral-100);
+}
+
+#login-form .form__link{
+    margin-top: .5em;
+}
+
+/* backround gradient circle */
+/* main::after {
+    content: "";
+    position: relative;
+    position: absolute;
+    display: inline;
+    z-index: -1;
+    width: 40rem;
+    height: 40rem;
+    left: 10%;
+    bottom:10%;
+    background: var(--grdient-primary);
+    border-radius: 100%;
+    transform: translate(-20%, -75%) rotate(35deg);
+    animation: 25s infinite alternate-reverse rotateCircle;
+} */
+
+/* .right-box{
+    overflow: hidden;
+} */
+
+
+/* LEFT BOX IMAGES */
+
+   .image-body {
+       position: relative;
+   }
+
+   .image-body img {
+       position: absolute;
+   }
+
+@media (max-width: 680px) {
+    main .left-box{
+        display: none;
+    }
+
+    main .right-box{ 
+        width: 100%;
+    }
+
+    .form__container{
+        max-width: 90%;
+        margin: auto;
+    }
+
+    .form__row .header__text{
+        font-size: var(--fs-l);
+    }
+
+    .form__row{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    footer ul{
+        text-align: center;
+    }
+
+    footer ul li:last-of-type {
+    width: 100%;
+    text-align: center;
+    font-weight: var(--fw-semibold);
+}
+
+    footer ul > li {
+    flex-grow: 1;
+    width: 33%;
+    }
+    body {
+        background-position: 2rem -10rem;
+    }
+
+}
+
+@media (min-width: 480px) and (max-width: 680px) {
+    .form__row .header__text{
+        font-size: var(--fs-l);
+    }
+}
+
+
+@media (max-width: 480px) {
+    body {
+            background-position: -2rem -10rem;
+    }
+}
+
+@media (min-width: 681px) and (max-width: 768px) {
+    body {
+            background-position: 15rem -4rem;
+        }
+
+    main .box{
+        width: 50%;
+    }
+
+    .right-box .form__container{
+        max-width: 90%;
+    }
+
+ 
+
+    .image-body img:last-of-type {
+        inset: 2em 1em;
+    }
+
+    .image-body img:first-of-type {
+        inset: 7em 7em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    main .left-box{
+        width: 40%;
+    }
+
+    main .right-box{
+        width: 50%;
+    }
+
+    .image-body img:last-of-type {
+        inset: 2em 1.5em;
+    }
+
+    .image-body img:first-of-type {
+        inset: 7em 7.5em;
+    }
+
+        .image-body img {
+            width: 11em;
+        }
+}
+
+@media (min-width: 857px) and (max-width: 1024px){
+    body {
+            background-position: 22rem -4rem;
+    }
+
+        .form__container .form__row{
+        max-width: 85%;
+        margin-left: auto;
+    }
+}

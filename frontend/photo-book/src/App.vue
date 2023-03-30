@@ -4,20 +4,6 @@
 
 
 <style>
-body{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
- 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  padding: 0;
-  margin: 0;
-
-}
-
+@import '@/assets/css/styles.css';
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@300;400;600;700;800&display=swap');
 </style>

@@ -5,7 +5,7 @@
             <img :src="require('@/assets/home/slide2.png')" alt="Second image slide">
           </div>
           <div class="image-heading">
-            <h1>Lorem ipsum</h1>
+            
           </div>
         </div>
 </template>

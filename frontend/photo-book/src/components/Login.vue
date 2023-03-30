@@ -23,7 +23,7 @@
                     </div>
                   </form>
                 </div>
-                <div v-else id="login-form">
+                <div v-else id="login-form" class="logged__form">
                         <div class="form__btn">
                             <router-link :to="{name: 'Dashboard'}" class="btn-link">Back to Dashboard</router-link>
                             <button @click="logoutUser()" class="btn-link">Log out</button>

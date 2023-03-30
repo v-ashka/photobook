@@ -1,3 +1,8 @@
+@font-face {
+    font-family: instagram-logo;
+    src: url('../../../public/fonts/logo/FontsFree-Net-Billabong.ttf');
+}
+
 :root {
     --clr-neutral-900: hsl(0, 0%, 0%);
     --clr-neutral-500: hsl(0, 0%, 18%);
@@ -12,7 +17,7 @@
 
     --ff-accent: 'Instagram Sans', serif;
     --ff-base: 'Montserrat', sans-serif;
-    --ff-logo: 'Billabong', sans-serif;
+    --ff-logo: instagram-logo, sans-serif;
 
     --fw-light: 300;
     --fw-regular: 400;
@@ -236,6 +241,20 @@ form .form__input {
     font-family: caption;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    
+    
+    -webkit-text-fill-color: var(--clr-neutral-900);
+    transition: background-color 5000s ease-in-out 0s;
+}
 #login-form .form__input input:is(:active, :focus, :valid)~label {
     top: 0rem;
     font-size: var(--fs-xs);
@@ -324,7 +343,81 @@ form .form__input {
        position: absolute;
    }
 
+.image-body img {
+    width: 14em;
+}
+
+
+main .left-box {
+    width: 45%;
+    overflow: hidden;
+}
+
+main .right-box {
+    width: 50%;
+}
+
+.image-body img:last-of-type {
+    inset: 5em 11em;
+    animation: 2.5s 1 normal slideDownToUp;
+}
+
+.image-body img:first-of-type {
+    inset: 7em 7em;
+    animation: 2.5s 1 normal slideUpToDown;
+}
+
+
+/* keyframes */
+
+@keyframes slideDownToUp {
+    from {
+        transform: translateY(50%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slideUpToDown {
+    from {
+        transform: translateY(-50%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+/* user is logged */
+
+.logged__form .form__btn{
+    column-gap: 1em;
+}
+
+.logged__form .btn-link{
+    padding: 0.5em 1rem;
+    width: fit-content;
+}
+
+/* register user */
+
+form .form__input.register{
+    height: 4.5rem;
+}
+
 @media (max-width: 680px) {
+.form__container:has(.logged__form) .header__text {
+        text-align: center;
+    }
+
+.logged__form .form__btn {
+        justify-content: center;
+        width: max-content;
+        flex-flow: wrap;
+}
+
     main .left-box{
         display: none;
     }
@@ -427,13 +520,107 @@ form .form__input {
         }
 }
 
-@media (min-width: 857px) and (max-width: 1024px){
+@media (min-width: 857px) and (max-width: 992px){
     body {
-            background-position: 22rem -4rem;
+            background-position: 24rem -5rem;
     }
 
-        .form__container .form__row{
+    .form__container .form__row{
         max-width: 85%;
         margin-left: auto;
     }
+
+        .image-body img:last-of-type {
+            inset: 2em 1.5em;
+        }
+    
+        .image-body img:first-of-type {
+            inset: 7em 7.5em;
+        }
+    
+        .image-body img {
+            width: 12em;
+        }
+}
+
+
+@media (min-width: 993px) and (max-width: 1154px){
+    body {
+            background-position: 26rem -5rem;
+            background-size: 60rem;
+        }
+}
+
+@media (min-width: 993px) and (max-width: 1299px) {
+
+    main .left-box {
+            width: 50%;
+        }
+    
+    main .right-box {
+            width: 50%;
+        }
+    .form__container header,
+    .form__container .form__row{
+        max-width: 90%;
+    }
+
+    .form__row{
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 993px) {
+    .image-body img:last-of-type {
+            inset: 2em 1.5em;
+        }
+    
+    .image-body img:first-of-type {
+        inset: 9em 11.5em;
+    }
+
+    .form__row{
+        margin-top: calc(25% - 4rem);
+    }
+}
+
+@media (min-width: 1155px) and (max-width: 1499px) {
+    body {
+            background-position: calc(100% + 18em + 25px);
+            background-size: calc(100% - 12rem);
+        }   
+}
+
+@media (min-width: 1300px) and (max-width: 1499px){
+    main .right-box{
+        width: 45%;
+    }
+}
+
+@media (min-width: 1300px){
+    footer{
+        max-width: 60%;
+        margin: unset;
+        margin-left: auto;
+    }
+}
+
+
+@media (min-width: 1500px) {
+        body {
+                background-position: calc(100% + 25em + 20px);
+                background-size: calc(80% - 2rem);
+            }
+
+            main .left-box {
+                width: 50%;
+            }
+
+            main .right-box {
+                width: 40%;
+            }
+        
+            .image-body img {
+                width: 17em;
+            }
 }

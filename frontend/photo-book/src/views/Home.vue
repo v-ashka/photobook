@@ -24,11 +24,6 @@
         <li>&copy; 2023 Photobook</li>
       </ul>
     </footer>
-    <section>
-      <div class="circle">
-
-      </div>
-    </section>
   </div>
 </template>
 

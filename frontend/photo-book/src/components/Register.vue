@@ -4,7 +4,7 @@
                 <p>Create <span class="highlighted">your</span> account <span>for free</span>.</p>
             </div>
             <div>
-            <form id="login-form" @submit.prevent="loginUser(email, pass)">
+            <form id="login-form" @submit.prevent="registerUser(login, email, pass, secPass)">
             <div class="form__input register">
                     <input type="text" name="login" v-model="login" required>
                     <label>Login</label>
@@ -21,10 +21,10 @@
                     <input type="password" name="secPassword" v-model="secPass" required>
                     <label>Repeat password</label>
             </div>
-                <a href="#" class="form__link">Forgot <span>password?</span></a>
+                <router-link :to="{name: 'Login'}" class="form__link">Already have <span>account?</span></router-link>
                 <div class="form__btn">
-                    <button type="submit" class="btn-link">Sign in</button>
-                    <router-link :to="{ name: 'Register' }" class="btn-link">Sign up</router-link>
+                    <button type="submit" class="btn-link register">Sign up</button>
+                    
                 </div>
                 </form>
             </div>
@@ -43,9 +43,43 @@ export default {
         const email = ref(null); 
         const pass = ref(null);
         const secPass = ref(null);
-                console.log(login.value, email.value)
+        console.log(login.value, email.value);
 
-        return { login, email, pass, secPass };
+
+     const registerUser = async (login, email, pass, secPass) => {
+
+        if (pass != secPass) {
+            return new Error('Passwords are not the same!');
+        }
+        
+            console.log(login, email, pass, secPass);
+            const query = {
+                    login: login,
+                    email: email,
+                    password: pass,
+            }
+
+            fetch('http://localhost:3000/api/v1/user/register', {
+                method: 'POST',
+                credentials: 'include',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(query)
+            })
+                .then((res) => {
+                    // console.log(res)
+                    if (!res.ok) {
+                        throw new Error('HTTP Status: ' + res.status);
+                    }
+                    return res.json();
+                })
+                .then(() => {
+                    // console.log(data);
+                    router.push('/account/login');
+                })
+                .catch(err => console.log(err));
+        }
+
+        return { login, email, pass, secPass, registerUser };
     }
 }
 

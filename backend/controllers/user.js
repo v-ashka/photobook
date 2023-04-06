@@ -8,9 +8,9 @@ const {createCustomError} = require('../errors/custom-error')
 
 // POST register user - create account
 const registerUser = asyncWrapper (async (req, res, next) => {
-    const { firstname, lastname, email, password } = req.body
-    if (!password || !email) {
-        return next(createCustomError(`Email or password are not specified!`, 404));
+    const { firstname, lastname, email, password, login } = req.body
+    if (!password || !email || !login){
+        return next(createCustomError(`Login or Email or password are not specified!`, 404));
     }
 
     const user = await User.findOne({ email: email })
@@ -22,6 +22,7 @@ const registerUser = asyncWrapper (async (req, res, next) => {
     bcrypt.hash(password, 10)
         .then(async (hash) => {
             await User.create({
+                nickname: login,
                 firstname,
                 lastname,
                 email,

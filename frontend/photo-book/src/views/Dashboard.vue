@@ -1,6 +1,225 @@
 <template>
   <div id="dashboard">
-    <h1>Dashboard</h1>
+    <div class="nav-top">
+      <div class="logo">Photobook</div>
+      <nav class="navigation-short">
+        <div class="menu-short">
+          <a href="#settings"><img src="../assets/avatars/avatar9.png" alt="User avatar" class="user-avatar"></a>
+            <div class="profile-menu" style="display: none">
+            <ul>
+              <li>Home</li>
+              <li>Messages</li>
+              <li>Notifications</li>
+              <li>Create new</li>
+              <li>Settings</li>
+            </ul>
+          </div>
+          <ul class="menu__btns">
+            <a href="#" aria-label="Add new content"><span class="material-symbols-outlined">library_add</span></a>
+            <a href="#" aria-label="Messages"><span class="material-symbols-outlined">chat</span></a>
+            <a href="#" aria-label="Notifications"><span class="material-symbols-outlined">notifications</span></a>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <p class="highlighted-text">Suggestions for you</p>
+    <section class="suggestions-carousel">
+      <!-- static -->
+      <div class="suggestion-item">
+        <img src="../assets/avatars/avatar1.png" alt="Suggestion friend avatar" width="50" class="img__avatar">
+        <div class="suggestion__user-info">
+          <p class="item__nickname">alberty33</p>
+          <p class="item__friends-count"><span>3</span> mutual friends</p>
+          <button class="item__add"> Add <span class="material-symbols-outlined">group_add</span> 
+          </button>
+        </div>
+      </div>
+      <div class="suggestion-item">
+          <img src="../assets/avatars/avatar2.png" alt="Suggestion friend avatar" width="50" class="img__avatar">
+          <div class="suggestion__user-info">
+            <p class="item__nickname">alberty33</p>
+            <p class="item__friends-count"><span>3</span> mutual friends</p>
+            <button class="item__add"> Add <span class="material-symbols-outlined">group_add</span> 
+            </button>
+          </div>
+        </div>
+         <div class="suggestion-item">
+            <img src="../assets/avatars/avatar4.png" alt="Suggestion friend avatar" width="50" class="img__avatar">
+            <div class="suggestion__user-info">
+              <p class="item__nickname">alberty33</p>
+              <p class="item__friends-count"><span>3</span> mutual friends</p>
+              <button class="item__add"> Add <span class="material-symbols-outlined">group_add</span> 
+              </button>
+            </div>
+          </div>
+           <div class="suggestion-item">
+            <img src="../assets/avatars/avatar3.png" alt="Suggestion friend avatar" width="50" class="img__avatar">
+            <div class="suggestion__user-info">
+              <p class="item__nickname">alberty33</p>
+              <p class="item__friends-count"><span>3</span> mutual friends</p>
+              <button class="item__add"> Add <span class="material-symbols-outlined">group_add</span> 
+              </button>
+            </div>
+          </div>
+      </section>
+      
+    <div class="shorts">
+      <section class="shorts-section active">
+        <!-- static -->
+        <img src="../assets/home/shorts.gif" alt="Short image">
+        <div class="short__box">
+          <div class="short__header">
+            <img src="../assets/avatars/avatar11.png" alt="Friend short post avatar" class="img__avatar">
+            <p class="short__nickname">
+              zigi77711
+            </p>
+          </div>
+          <div class="short__desc">
+            <p>Funny red fox :D</p>
+          </div>
+        </div>
+      </section>
+        <section class="shorts-section ">
+        <!-- static -->
+          <img src="../assets/home/shorts.gif" alt="Short image">
+          <div class="short__box">
+            <div class="short__header">
+              <img src="../assets/avatars/avatar11.png" alt="Friend short post avatar" class="img__avatar">
+              <p class="short__nickname">
+                zigi77711
+              </p>
+            </div>
+            <div class="short__desc">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, repudiandae!</p>
+            </div>
+          </div>
+        </section>
+        <section class="shorts-section ">
+          <!-- static -->
+            <img src="../assets/home/shorts.gif" alt="Short image">
+            <div class="short__box">
+              <div class="short__header">
+                <img src="../assets/avatars/avatar11.png" alt="Friend short post avatar" class="img__avatar">
+                <p class="short__nickname">
+                  zigi77711
+                </p>
+              </div>
+              <div class="short__desc">
+                <p>Funny red fox :D</p>
+              </div>
+            </div>
+          </section>
+    </div>
+
+    <main class="posts">
+      <!-- static -->
+      <div class="post">
+        <img class="image-post" src="../assets/home/post.png" alt="User post">
+        <div class="post__info">
+          <div class="post__avatar">
+            <img src="../assets/avatar.png" alt="User avatar" class="img__avatar">
+          </div>
+          <div class="post__content">
+            <div class="post__header">
+              <p class="author">zowiee_ami</p>
+              <p class="date_add">11.03.2023</p>
+            </div>
+            <div class="post__desc">
+              <p>Random landscape of nature lorem ipsum dolot imit. Septa inca la plata dolot imit. Lorem Lorem Lorem!!!</p>
+            </div>
+          </div>
+          <div class="post__socials">
+            <div class="social-box">
+            <!-- like -->
+                <span class="material-symbols-outlined">favorite</span>
+                <div class="social__counter"><span>12.3k</span></div>
+            </div>
+            <div class="social-box">
+            <!-- comment -->
+                <span class="material-symbols-outlined">chat_bubble</span>
+                <div class="social__counter"><span>9210</span></div>
+            </div>
+            <div class="social-box">
+            <!-- share -->
+               <span class="material-symbols-outlined">share</span>
+               <div class="social__counter"><span>300</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+           <div class="post">
+          <img class="image-post" src="../assets/home/post.png" alt="User post">
+          <div class="post__info">
+            <div class="post__avatar">
+              <img src="../assets/avatar.png" alt="User avatar" class="img__avatar">
+            </div>
+            <div class="post__content">
+              <div class="post__header">
+                <p class="author">zowiee_ami</p>
+                <p class="date_add">11.03.2023</p>
+              </div>
+              <div class="post__desc">
+                <p>Random landscape of nature lorem ipsum dolot imit. Septa inca la plata dolot imit. Lorem Lorem Lorem!!!</p>
+              </div>
+            </div>
+            <div class="post__socials">
+              <div class="social-box">
+              <!-- like -->
+                  <span class="material-symbols-outlined">favorite</span>
+                  <div class="social__counter"><span>12.3k</span></div>
+              </div>
+              <div class="social-box">
+              <!-- comment -->
+                  <span class="material-symbols-outlined">chat_bubble</span>
+                  <div class="social__counter"><span>9210</span></div>
+              </div>
+              <div class="social-box">
+              <!-- share -->
+                 <span class="material-symbols-outlined">share</span>
+                 <div class="social__counter"><span>300</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+             <div class="post">
+          <img class="image-post" src="../assets/home/post.png" alt="User post">
+          <div class="post__info">
+            <div class="post__avatar">
+              <img src="../assets/avatar.png" alt="User avatar" class="img__avatar">
+            </div>
+            <div class="post__content">
+              <div class="post__header">
+                <p class="author">zowiee_ami</p>
+                <p class="date_add">11.03.2023</p>
+              </div>
+              <div class="post__desc">
+                <p>Random landscape of nature lorem ipsum dolot imit. Septa inca la plata dolot imit. Lorem Lorem Lorem!!!</p>
+              </div>
+            </div>
+            <div class="post__socials">
+              <div class="social-box">
+              <!-- like -->
+                  <span class="material-symbols-outlined">favorite</span>
+                  <div class="social__counter"><span>12.3k</span></div>
+              </div>
+              <div class="social-box">
+              <!-- comment -->
+                  <span class="material-symbols-outlined">chat_bubble</span>
+                  <div class="social__counter"><span>9210</span></div>
+              </div>
+              <div class="social-box">
+              <!-- share -->
+                 <span class="material-symbols-outlined">share</span>
+                 <div class="social__counter"><span>300</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+
+
     <div class="form-image-upload-box">
       <form id="upload-form" @submit.prevent="sendFileToServer()">
         <div>

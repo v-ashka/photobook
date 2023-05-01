@@ -7,17 +7,17 @@
           <a href="#settings"><img src="../assets/avatars/avatar9.png" alt="User avatar" class="user-avatar"></a>
             <div class="profile-menu" style="display: none">
             <ul>
-              <li>Home</li>
-              <li>Messages</li>
-              <li>Notifications</li>
-              <li>Create new</li>
-              <li>Settings</li>
+              <a href="#home">Home</a>
+              <a href="#messages">Messages</a>
+              <a href="#notifications">Notifications</a>
+              <a href="#create_new">Create new</a>
+              <a href="#settings">Settings</a>
             </ul>
           </div>
           <ul class="menu__btns">
-            <a href="#" aria-label="Add new content"><span class="material-symbols-outlined">library_add</span></a>
-            <a href="#" aria-label="Messages"><span class="material-symbols-outlined">chat</span></a>
-            <a href="#" aria-label="Notifications"><span class="material-symbols-outlined">notifications</span></a>
+            <a href="#add_new" aria-label="Add new content"><span class="material-symbols-outlined">library_add</span></a>
+            <a href="#messages" aria-label="Messages"><span class="material-symbols-outlined">chat</span></a>
+            <a href="#notifications" aria-label="Notifications"><span class="material-symbols-outlined">notifications</span></a>
           </ul>
         </div>
       </nav>
@@ -26,45 +26,50 @@
     <section class="suggestions-carousel">
       <!-- static -->
       <div class="suggestion-item">
-        <img src="../assets/avatars/avatar1.png" alt="Suggestion friend avatar" width="50" class="img__avatar">
+        <a href="#suggestion_user__profile"><img src="../assets/avatars/avatar1.png" alt="Suggestion friend avatar" width="50" class="img__avatar"></a>
         <div class="suggestion__user-info">
-          <p class="item__nickname">alberty33</p>
-          <p class="item__friends-count"><span>3</span> mutual friends</p>
+          <a href="#suggestion_user__profile" class="item__nickname">alberty33</a>
+          <p class="item__friends-count"><span><a href="#show_mutual_friends">3</a></span> mutual friends</p>
           <button class="item__add"> Add <span class="material-symbols-outlined">group_add</span> 
           </button>
         </div>
       </div>
-      <div class="suggestion-item">
-          <img src="../assets/avatars/avatar2.png" alt="Suggestion friend avatar" width="50" class="img__avatar">
+          <!-- static -->
+        <div class="suggestion-item">
+          <a href="#suggestion_user__profile"><img src="../assets/avatars/avatar2.png" alt="Suggestion friend avatar" width="50" class="img__avatar"></a>
           <div class="suggestion__user-info">
-            <p class="item__nickname">alberty33</p>
-            <p class="item__friends-count"><span>3</span> mutual friends</p>
+            <a href="#suggestion_user__profile" class="item__nickname">xxx_ooo_xxx_oo</a>
+            <p class="item__friends-count"><span><a href="#show_mutual_friends">3</a></span> mutual friends</p>
             <button class="item__add"> Add <span class="material-symbols-outlined">group_add</span> 
             </button>
           </div>
         </div>
-         <div class="suggestion-item">
-            <img src="../assets/avatars/avatar4.png" alt="Suggestion friend avatar" width="50" class="img__avatar">
-            <div class="suggestion__user-info">
-              <p class="item__nickname">alberty33</p>
-              <p class="item__friends-count"><span>3</span> mutual friends</p>
-              <button class="item__add"> Add <span class="material-symbols-outlined">group_add</span> 
-              </button>
-            </div>
+
+              <!-- static -->
+        <div class="suggestion-item">
+          <a href="#suggestion_user__profile"><img src="../assets/avatars/avatar3.png" alt="Suggestion friend avatar" width="50" class="img__avatar"></a>
+          <div class="suggestion__user-info">
+            <a href="#suggestion_user__profile" class="item__nickname">zowiee_ami</a>
+            <p class="item__friends-count"><span><a href="#show_mutual_friends">3</a></span> mutual friends</p>
+            <button class="item__add"> Add <span class="material-symbols-outlined">group_add</span> 
+            </button>
           </div>
-           <div class="suggestion-item">
-            <img src="../assets/avatars/avatar3.png" alt="Suggestion friend avatar" width="50" class="img__avatar">
-            <div class="suggestion__user-info">
-              <p class="item__nickname">alberty33</p>
-              <p class="item__friends-count"><span>3</span> mutual friends</p>
-              <button class="item__add"> Add <span class="material-symbols-outlined">group_add</span> 
-              </button>
-            </div>
+        </div>
+
+              <!-- static -->
+        <div class="suggestion-item">
+          <a href="#suggestion_user__profile"><img src="../assets/avatars/avatar4.png" alt="Suggestion friend avatar" width="50" class="img__avatar"></a>
+          <div class="suggestion__user-info">
+            <a href="#suggestion_user__profile" class="item__nickname">alberty33</a>
+            <p class="item__friends-count"><span><a href="#show_mutual_friends">3</a></span> mutual friends</p>
+            <button class="item__add"> Add <span class="material-symbols-outlined">group_add</span> 
+            </button>
           </div>
+        </div>
       </section>
       
     <div class="shorts">
-      <section class="shorts-section active">
+      <a href="#shorts-item1" class="shorts-section active">
         <!-- static -->
         <img src="../assets/home/shorts.gif" alt="Short image">
         <div class="short__box">
@@ -78,8 +83,8 @@
             <p>Funny red fox :D</p>
           </div>
         </div>
-      </section>
-        <section class="shorts-section ">
+      </a>
+        <a href="#shorts-item2" class="shorts-section ">
         <!-- static -->
           <img src="../assets/home/shorts.gif" alt="Short image">
           <div class="short__box">
@@ -93,8 +98,8 @@
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, repudiandae!</p>
             </div>
           </div>
-        </section>
-        <section class="shorts-section ">
+        </a>
+        <a href="#shorts-item3" class="shorts-section ">
           <!-- static -->
             <img src="../assets/home/shorts.gif" alt="Short image">
             <div class="short__box">
@@ -108,55 +113,113 @@
                 <p>Funny red fox :D</p>
               </div>
             </div>
-          </section>
+          </a>
     </div>
 
     <main class="posts">
-      <!-- static -->
-      <div class="post">
-        <img class="image-post" src="../assets/home/post.png" alt="User post">
-        <div class="post__info">
-          <div class="post__avatar">
-            <img src="../assets/avatar.png" alt="User avatar" class="img__avatar">
+             <!-- static -->
+          <div class="post">
+            <a href="#user_post"><img class="image-post" src="../assets/home/post.png" alt="User post"></a>
+            <div class="post__info">
+              <div class="post__avatar">
+                <a href="#user_acc"><img src="../assets/avatar.png" alt="User avatar" class="img__avatar"></a>
+              </div>
+              <div class="post__header__mobile">
+                    <a href="#user_acc"><img src="../assets/avatar.png" alt="User avatar" class="img__avatar"></a>
+                    <div class="post__user__mobile">
+                      <a href="#user_acc" class="author">zowiee_ami</a>
+                      <p class="date_add">11.03.2023</p>
+                    </div>
+              </div>
+              <div class="post__content">
+                <div class="post__header">
+                  <a href="#user_acc" class="author">zowiee_ami</a>
+                  <p class="date_add">11.03.2023</p>
+                </div>
+                <div class="post__desc">
+                  <p>Random landscape of nature lorem ipsum dolot imit. Septa inca la plata dolot imit. Lorem Lorem Lorem!!!</p>
+                </div>
+              </div>
+              <div class="post__socials">
+                <a href="#like" class="social-box">
+                <!-- like -->
+                    <span class="material-symbols-outlined">favorite</span>
+                    <div class="social__counter"><span>12.3k</span></div>
+                </a>
+                <a href="#comment" class="social-box">
+                <!-- comment -->
+                    <span class="material-symbols-outlined">chat_bubble</span>
+                    <div class="social__counter"><span>9210</span></div>
+                </a>
+                <a href="#share" class="social-box">
+                <!-- share -->
+                   <span class="material-symbols-outlined">share</span>
+                   <div class="social__counter"><span>300</span></div>
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="post__content">
-            <div class="post__header">
-              <p class="author">zowiee_ami</p>
-              <p class="date_add">11.03.2023</p>
-            </div>
-            <div class="post__desc">
-              <p>Random landscape of nature lorem ipsum dolot imit. Septa inca la plata dolot imit. Lorem Lorem Lorem!!!</p>
-            </div>
-          </div>
-          <div class="post__socials">
-            <div class="social-box">
-            <!-- like -->
-                <span class="material-symbols-outlined">favorite</span>
-                <div class="social__counter"><span>12.3k</span></div>
-            </div>
-            <div class="social-box">
-            <!-- comment -->
-                <span class="material-symbols-outlined">chat_bubble</span>
-                <div class="social__counter"><span>9210</span></div>
-            </div>
-            <div class="social-box">
-            <!-- share -->
-               <span class="material-symbols-outlined">share</span>
-               <div class="social__counter"><span>300</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-           <div class="post">
-          <img class="image-post" src="../assets/home/post.png" alt="User post">
+
+                  <!-- static -->
+          <div class="post">
+            <a href="#user_post"><img class="image-post" src="../assets/home/post.png" alt="User post"></a>
+            <div class="post__info">
+              <div class="post__avatar">
+                <a href="#user_acc"><img src="../assets/avatar.png" alt="User avatar" class="img__avatar"></a>
+              </div>
+              <div class="post__header__mobile">
+                    <a href="#user_acc"><img src="../assets/avatar.png" alt="User avatar" class="img__avatar"></a>
+                    <div class="post__user__mobile">
+                      <a href="#user_acc" class="author">zowiee_ami</a>
+                      <p class="date_add">11.03.2023</p>
+                    </div>
+              </div>
+              <div class="post__content">
+                <div class="post__header">
+                  <a href="#user_acc" class="author">zowiee_ami</a>
+                  <p class="date_add">11.03.2023</p>
+                </div>
+                <div class="post__desc">
+                  <p>Random landscape of nature lorem ipsum dolot imit. Septa inca la plata dolot imit. Lorem Lorem Lorem!!!</p>
+                </div>
+              </div>
+              <div class="post__socials">
+                <a href="#like" class="social-box">
+                <!-- like -->
+                    <span class="material-symbols-outlined">favorite</span>
+                    <div class="social__counter"><span>12.3k</span></div>
+                </a>
+                <a href="#comment" class="social-box">
+                <!-- comment -->
+                    <span class="material-symbols-outlined">chat_bubble</span>
+                    <div class="social__counter"><span>9210</span></div>
+                </a>
+                <a href="#share" class="social-box">
+                <!-- share -->
+                   <span class="material-symbols-outlined">share</span>
+                   <div class="social__counter"><span>300</span></div>
+                </a>
+              </div>
+            </div>
+          </div>
+            <!-- static -->
+        <div class="post">
+          <a href="#user_post"><img class="image-post" src="../assets/home/post.png" alt="User post"></a>
           <div class="post__info">
             <div class="post__avatar">
-              <img src="../assets/avatar.png" alt="User avatar" class="img__avatar">
+              <a href="#user_acc"><img src="../assets/avatar.png" alt="User avatar" class="img__avatar"></a>
+            </div>
+            <div class="post__header__mobile">
+                  <a href="#user_acc"><img src="../assets/avatar.png" alt="User avatar" class="img__avatar"></a>
+                  <div class="post__user__mobile">
+                    <a href="#user_acc" class="author">zowiee_ami</a>
+                    <p class="date_add">11.03.2023</p>
+                  </div>
             </div>
             <div class="post__content">
               <div class="post__header">
-                <p class="author">zowiee_ami</p>
+                <a href="#user_acc" class="author">zowiee_ami</a>
                 <p class="date_add">11.03.2023</p>
               </div>
               <div class="post__desc">
@@ -164,56 +227,21 @@
               </div>
             </div>
             <div class="post__socials">
-              <div class="social-box">
+              <a href="#like" class="social-box">
               <!-- like -->
                   <span class="material-symbols-outlined">favorite</span>
                   <div class="social__counter"><span>12.3k</span></div>
-              </div>
-              <div class="social-box">
+              </a>
+              <a href="#comment" class="social-box">
               <!-- comment -->
                   <span class="material-symbols-outlined">chat_bubble</span>
                   <div class="social__counter"><span>9210</span></div>
-              </div>
-              <div class="social-box">
+              </a>
+              <a href="#share" class="social-box">
               <!-- share -->
                  <span class="material-symbols-outlined">share</span>
                  <div class="social__counter"><span>300</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-             <div class="post">
-          <img class="image-post" src="../assets/home/post.png" alt="User post">
-          <div class="post__info">
-            <div class="post__avatar">
-              <img src="../assets/avatar.png" alt="User avatar" class="img__avatar">
-            </div>
-            <div class="post__content">
-              <div class="post__header">
-                <p class="author">zowiee_ami</p>
-                <p class="date_add">11.03.2023</p>
-              </div>
-              <div class="post__desc">
-                <p>Random landscape of nature lorem ipsum dolot imit. Septa inca la plata dolot imit. Lorem Lorem Lorem!!!</p>
-              </div>
-            </div>
-            <div class="post__socials">
-              <div class="social-box">
-              <!-- like -->
-                  <span class="material-symbols-outlined">favorite</span>
-                  <div class="social__counter"><span>12.3k</span></div>
-              </div>
-              <div class="social-box">
-              <!-- comment -->
-                  <span class="material-symbols-outlined">chat_bubble</span>
-                  <div class="social__counter"><span>9210</span></div>
-              </div>
-              <div class="social-box">
-              <!-- share -->
-                 <span class="material-symbols-outlined">share</span>
-                 <div class="social__counter"><span>300</span></div>
-              </div>
+              </a>
             </div>
           </div>
         </div>

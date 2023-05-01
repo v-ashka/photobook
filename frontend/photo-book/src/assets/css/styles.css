@@ -73,6 +73,10 @@ a, a:hover, a:visited, a:link, a:active{
     box-shadow: none;
 }
 
+a{
+    color: var(--clr-neutral-500);
+}
+
 /*
   3. Allow percentage-based heights in the application
 */
@@ -719,11 +723,16 @@ form .form__input.register{
     flex-shrink: 0;
     width: 50%;
     justify-content: space-evenly;
+    gap: .5em;
+}
+
+.suggestion-item a{
+    max-width: 5em;
 }
 
 .suggestion-item img{
     height: fit-content;
-    width: 40%;
+    width: 4em;
 }
 
 .suggestion__user-info .item__nickname,
@@ -854,6 +863,7 @@ main.posts{
     gap: 1em;
 }
 
+.post__header__mobile .author,
 .post__header .author{
     font-weight: var(--fw-semibold);
 }
@@ -880,3 +890,113 @@ main.posts{
     border-radius: 10px;
     padding: 0em .7em;
 }
+
+.post__desc{
+    margin-top: .8em;
+}
+
+@media (max-width: 319px) {
+    .nav-top{
+        flex-flow: column-reverse;
+    }
+
+    .logo{
+        text-align: right;
+    }
+
+    .menu-short a > img{
+        width: 75%;
+    }
+
+    .menu-short{
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .post__socials{
+        flex-basis: 100% !important;
+        justify-content: space-around !important;
+
+    }
+}
+
+@media (max-width: 550px) {
+    .post__header__mobile .img__avatar{
+        width: 100%;
+        height: fit-content;
+    }
+
+    .post__header,
+    .post__avatar{
+        display: none;
+    }
+
+    .post__info{
+        padding: 1.5em .5em;
+        justify-content: space-between;
+    }
+
+    .post__header__mobile{
+        flex-basis: 35%;
+        display: flex;
+        flex-flow: row;
+        align-items: start;
+        gap: .5rem;
+        font-size: var(--fs-xs);
+    }
+
+
+    .post__info{
+        flex-flow: wrap;
+    }
+
+    .post__content{
+        order: 2;
+    }
+
+    .post__socials{
+        order: 1;
+        gap: .5rem;
+        flex-basis: 50%;
+        justify-content: right;
+    }
+
+    .social-box>span{
+        font-size: var(--fs-l);
+    }
+
+    .social__counter{
+        font-size: var(--fs-xs);
+    }
+
+    .post__header__mobile > a {
+        width: 3rem;
+    }
+
+
+}
+
+@media (min-width: 550px) {
+    .post__header__mobile{
+        display: none;
+    }
+
+    .post__socials{
+        flex-flow: row;
+    }
+}
+
+@media (min-width: 769px) {
+    .post__socials{
+        flex-basis: unset;
+    }
+
+    .post__avatar{
+        flex-basis: 5%;
+    }
+
+    .post__desc{
+        max-width: 95%;
+    }
+}
+

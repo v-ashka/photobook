@@ -14,7 +14,29 @@ const routes = [
   {
     path: '/dashboard',
     name: 'Dashboard',
-    component: Dashboard
+    component: Dashboard,
+    children: [
+      {
+        name: "Settings",
+        path: "settings",
+        component: '',
+      },
+      {
+        name: "Messages",
+        path: "msg",
+        component: 'm',
+      },
+      {
+        name: "Add new",
+        path: "add_new",
+        component: 'crt',
+      },
+      {
+        name: "Notifications",
+        path: "notifications",
+        component: '',
+      },
+    ],
   },
   {
     path: '/account',

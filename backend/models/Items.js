@@ -36,4 +36,4 @@ const ItemSchema = new mongoose.Schema({
     comments: {type: Number, default: 0},
 })
 
-module.exports = mongoose.model('Items', ItemSchema)
+module.exports = mongoose.model('items', ItemSchema)

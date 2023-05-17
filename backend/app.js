@@ -6,7 +6,7 @@ const path = require('path')
 const cors = require('cors');
 
 const cookieParser = require('cookie-parser');
-const routeItems = require('./routes/items');
+const routePosts = require('./routes/items');
 const routeUser = require('./routes/user');
 const routerFile = require('./routes/files');
 
@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, "index.html")); 
 });
 
-app.use('/api/v1/items', routeItems);
+app.use('/api/v1/items', routePosts);
 app.use('/api/v1/user', routeUser);
 app.use('/api/v1/file', routerFile);
 app.use('/img', express.static(path.join(__dirname, "files/")))
